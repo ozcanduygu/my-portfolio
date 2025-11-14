@@ -1,8 +1,20 @@
-import { skills } from "../data/data";
+import { skillsData, skillsDataEN} from "../data/data";
+import { LanguageContext } from '../context/LanguageContext';
+import React, { useContext } from 'react';
+
 function Skills() {
+    const { language } = useContext(LanguageContext);
+    const skills = language === "en" ? skillsDataEN : skillsData;
+
     return (
         <section>
-            Skills Component
+           <h1>Skills</h1>
+           {skills.map((skill)=>(
+            <div key={skill.name}>
+                <h3>{skill.name}</h3>
+                <p>{skill.description}</p>
+            </div>
+           ))}
         </section>
     )
 }

@@ -7,17 +7,21 @@ import Projects from './components/Projects'
 import Profile from './components/Profile'
 import React from 'react';
 import Footer from './components/Footer';
+import { LanguageProvider } from './context/LanguageContext'
+
 
 function App() {
  
   return (
     <>
+      <LanguageProvider>
       <Header />
       <Hero />
       <Skills />
-      <Projects />
       <Profile />
+      <Projects />
       <Footer />
+      </LanguageProvider>
     </>
   )
 }

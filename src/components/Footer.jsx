@@ -1,7 +1,10 @@
+import React from 'react';
+import { footerData } from '../data/data';
 function Footer(){
     return(
         <section>
-            Footer Komponent
+            <h2>{footerData[0].title}</h2>
+            <p>{footerData[0].email}</p>
         </section>
     )
 }
