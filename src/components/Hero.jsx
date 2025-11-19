@@ -6,7 +6,7 @@ function Hero(){
     const { language } = useContext(LanguageContext);
     const hero = language === "en" ? heroDataEN[0] : heroData[0];
     return (
-        <section className="p-8 bg-gray-100 dark:bg-gray-900 dark:text-white">
+        <section>
             <p>{hero.name}</p>
             <h1>{hero.title}</h1>
             <p>{hero.content}</p>
